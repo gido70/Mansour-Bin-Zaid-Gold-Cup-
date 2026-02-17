@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="موقع عرض نتائج بطولة كأس منصور بن زايد 2026 للجمهور." name="description"/>
+<title>بطولة كأس منصور بن زايد 2026</title>
+<link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header">
+<div class="header-inner container">
+<div class="brand">
+<img alt="Logo" class="logo logo-cup" onerror="this.style.display='none'" src="assets/img/logo-cup-white.png"/>
+<img alt="Logo" class="logo logo-committee" onerror="this.style.display='none'" src="assets/img/logo-committee-white.png"/>
+<div class="titles">
+<b data-tournament="">بطولة كأس منصور بن زايد</b>
+<span>عرض للجمهور — <span data-season="">2026</span></span>
+</div>
+</div>
+<div aria-label="Sections" class="nav" role="navigation">
+<button class="active" data-target="secMatches">المباريات</button>
+<button data-target="secGroups">المجموعات</button>
+<button data-target="secStandings">الترتيب</button>
+<button data-target="secScorers">الهدافون</button>
+<button data-target="secCards">البطاقات</button>
+<button data-target="secTeams">الفرق</button>
+<button data-target="secPlayers">اللاعبون</button>
+</div>
+<div class="right-tools">
+<div class="search" title="بحث">
+<span style="opacity:.7">🔎</span>
+<input id="searchInput" placeholder="ابحث..."/>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="hero-banner">
+<img alt="بطولة كأس منصور بن زايد 2026" src="assets/img/bg-hero.jpg"/>
+</div>
+<div class="hero">
+<div class="hero-inner">
+<div>
+<h1 class="tournament-title" data-tournament="">بطولة كأس منصور بن زايد 2026</h1>
+<p class="tournament-desc">النسخة الثالثة عشر من البطولة، التي تلعب على مدار 20 يوماً، وتتكون البطولة من 116 فريقاً و240 لاعباً و32 مباراة ، نظام البطولة على يبدأ بدوري المجموعات (16) ثم دوري ربع النهائي (8) بخروج المغلوب ثم دوري نصف النهائي (4) ثم مباراة الثالث والرابع ثم المباراة النهائي</p>
+<div class="note hidden" id="loadError" style="margin-top:10px; color:#ffd1d1"></div>
+</div>
+<div class="kpis">
+<div class="kpi"><b id="kpiMatches">—</b><span>مباراة</span></div>
+<div class="kpi"><b id="kpiGoals">—</b><span>هدف</span></div>
+<div class="kpi"><b id="kpiTeams">—</b><span>فريق</span></div>
+<div class="kpi"><b id="kpiPlayers">—</b><span>لاعب</span></div>
+</div>
+</div>
+</div>
+<div class="grid">
+<!-- Matches -->
+<section class="section active" id="secMatches">
+<div class="card">
+<div class="card-h">
+<b>المباريات</b>
+<span class="badge" id="matchesCount">—</span>
+</div>
+<div class="card-b">
+<div class="table-wrap">
+<table id="tblMatches">
+<thead>
+<tr>
+<th>الكود</th>
+<th>المجموعة</th>
+<th>التاريخ/الوقت</th>
+<th>الملعب</th>
+<th>الفريق 1</th>
+<th>النتيجة</th>
+<th>الفريق 2</th>
+<th>المرحلة</th>
+<th>أفضل لاعب</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Groups -->
+<section class="section" id="secGroups">
+<div id="groupsWrap" style="display:grid; gap:14px"></div>
+</section>
+<!-- Standings -->
+<section class="section" id="secStandings">
+<div id="standingsWrap" style="display:grid; gap:14px"></div>
+</section>
+<!-- Scorers -->
+<section class="section" id="secScorers">
+<div class="card">
+<div class="card-h">
+<b>الهدافون</b>
+<span class="badge" id="scorersCount">—</span>
+</div>
+<div class="card-b">
+<div class="table-wrap">
+<table id="tblScorers">
+<thead>
+<tr>
+<th>#</th>
+<th>اللاعب</th>
+<th>الفريق</th>
+<th>الأهداف</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+<section class="section" id="secCards">
+<div class="section-head">
+<h2>البطاقات</h2>
+<span class="muted" id="cardsCount"></span>
+</div>
+<div class="card">
+<table class="tbl" id="tblCards">
+<thead>
+<tr>
+<th>اللاعب</th>
+<th>الفريق</th>
+<th>أصفر</th>
+<th>أحمر</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</section>
+<!-- Teams -->
+<section class="section" id="secTeams">
+<div class="card">
+<div class="card-h">
+<b>الفرق</b>
+<span class="badge" id="teamsCount">—</span>
+</div>
+<div class="card-b">
+<div class="table-wrap">
+<table id="tblTeams">
+<thead>
+<tr>
+<th>#</th>
+<th>الفريق</th>
+<th>المجموعة</th>
+<th>الاختصار</th>
+<th>المدرب</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Players -->
+<section class="section" id="secPlayers">
+<div class="card">
+<div class="card-h">
+<b>اللاعبون</b>
+<span class="badge" id="playersCount">—</span>
+</div>
+<div class="card-b">
+<div class="table-wrap">
+<table id="tblPlayers">
+<thead>
+<tr>
+<th>#</th>
+<th>اللاعب</th>
+<th>الفريق</th>
+<th>المركز</th>
+<th>رقم القميص</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="footer">
+<div>© <span data-tournament=""></span> — واجهة RTL جاهزة للنشر على GitHub Pages</div>
+
+</div>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/helpers.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
